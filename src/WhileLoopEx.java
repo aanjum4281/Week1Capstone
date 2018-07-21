@@ -18,11 +18,10 @@ public class WhileLoopEx {
 		//make work lower case here
 		input = scnr.nextLine();
 		
-		//Does not work but trying to get it fix. submitted to meet the deadline 
-		if (!input.contains('a') && !input.contains('e') && 
-				!input.contains('i') && !input.contains('o') && !input.contains('u') ) {
-			
-		}
+		
+		//already went through and removed lines 21-25
+		
+		
 		
 		translated = solve (input);
 		System.out.println(translated);
@@ -65,15 +64,19 @@ public class WhileLoopEx {
 		}
 		
 		public static int getFirstVowel(String word) {
-			for (int i = 0; i < word.length(); i++) {
-				if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' ||
-						word.charAt(i) == 'o' || word.charAt(i) == 'u') {
-					return i;
-					
-				}
-			}
-		
-					return -1;
-				
-		}
+        	
+        	//For loop to keep count of the index, until it reaches a vowel
+        	int count = 0;
+            for (int i = 0; i < word.length(); i++) {
+                if (word.charAt(i) != 'a' && word.charAt(i) != 'e' && word.charAt(i) != 'i' &&
+                        word.charAt(i) != 'o' && word.charAt(i) != 'u') {
+                    count++;
+                }
+                
+            
+            }
+        
+                    return count;
+                
+        }
 		}
